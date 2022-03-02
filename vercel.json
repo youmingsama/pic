@@ -9,4 +9,6 @@
         "Access-Control-Allow-Origin": "*"
       },
       "dest": "/api"
-    },
+    }
+  ]
+}
