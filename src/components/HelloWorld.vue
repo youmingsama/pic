@@ -22,7 +22,13 @@ export default {
   methods:{
     url1(){
       var url1 = "https://hatsunemiku-tov.imwork.net/api/miku/";
-      axios.get(url1).then((response)=>{
+      axios.get({
+        url:url1,
+        headers:{
+          "Content-Type":"application/octet-stream"
+          "Access-Control-Allow-Origin":"*"
+        }
+      }).then((response)=>{
         this.msg=response.data.url;
         console.log("请求到的数据66666："+this.msg);
       }).catch((error)=>{
